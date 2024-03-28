@@ -1,0 +1,86 @@
+/* registration.css */
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex; /* Додаємо flex контейнер для вирівнювання посередині */
+    flex-direction: column; /* Розташовуємо елементи колонкою */
+    align-items: center; /* Вирівнюємо елементи посередині горизонтально */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.form-group:nth-child(4),
+.form-group:nth-child(5) {
+    margin-bottom: 5px; /* Зменшити відстань між відповідними .form-group */
+}
+
+#otherGroup {
+    display: none;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.seats {
+    margin-left: 10px;
+    color: #aab7c5;
+    font-weight: bold;
+}

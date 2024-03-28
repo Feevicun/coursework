@@ -1,0 +1,143 @@
+/* authorization.css */
+/* Add your custom styles for the authorization page here */
+body {
+    background-color: #f0f0f0; /* Change background color as desired */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form {
+    width: 400px; /* Increase form width as desired */
+    padding: 20px;
+    background-color: #fff; /* Change form background color as desired */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    transition: transform 0.3s ease; /* Add a smooth hover effect */
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative; /* Add position relative to contain the bar element */
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth border transition */
+}
+
+.tabs button.active {
+    border-bottom: 2px solid #333; /* Active tab indicator color */
+}
+
+/* Black bar element */
+.bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%; /* Initially, the bar is under the "Login" tab */
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease; /* Add smooth transition for the bar */
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: none; /* Hide forms by default */
+}
+
+.form.active {
+    display: block; /* Display the active form */
+    opacity: 0; /* Set initial opacity to 0 for animation */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Add a fade-in animation */
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #333; /* Change button color as desired */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555; /* Change button color on hover as desired */
+}
+
+p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+p a {
+    color: #333; /* Change link color as desired */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Animation for form transition */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+select#userRole {
+    width: 100px; /* Задайте бажану ширину кнопки */
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff; /* Задній фон */
+    color: #333; /* Колір тексту */
+    margin-top: 10px;
+}
+
+/* Зміна стилю при фокусі на селекторі */
+select#userRole:focus {
+    border-color: #555; /* Колір межі при фокусі */
+}

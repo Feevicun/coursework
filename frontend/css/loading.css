@@ -1,0 +1,50 @@
+/* Add your custom styles for the loading page here */
+body {
+    background-color: #f0f0f0; /* Change background color as desired */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading-container {
+    text-align: center;
+    color: #333; /* Change text color as desired */
+}
+
+.loading-logo img {
+    width: 100px; /* Adjust the logo size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.loading-spinner .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.loading-spinner .lds-ellipsis div {
+    position: absolute;
+    animation: lds-ellipsis 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    background: #333; /* Change spinner color as desired */
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translate(32px, 32px);
+}
+
+@keyframes lds-ellipsis {
+    0%, 100% { transform: translate(32px, 32px); }
+    25% { transform: translate(0, 32px); }
+    50% { transform: translate(32px, 0); }
+    75% { transform: translate(64px, 32px); }
+}

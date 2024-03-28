@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="0;url=authorization.html"> -->
+    <link rel="stylesheet" href="css/loading.css">
+    <title>Loading...</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="loading-container">
+
+        <div class="loading-spinner">
+           
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+    <script>
+        // Simulate loading time
+        setTimeout(function () {
+            // Redirect to the authorization page
+            window.location.href = 'authorization.html';
+        }, 3000); 
+    </script>
+    
+</body>
+</html>

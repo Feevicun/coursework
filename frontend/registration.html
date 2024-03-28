@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Course Work Registration</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <a href="chat/www/index.html" style="position: absolute; top: 10px; right: 10px;">Chat</a>
+            <h2>Course Work Registration</h2>
+            <form>
+                <div class="name-surname">
+                    <div class="form-group">
+                        <input type="text" placeholder="Surname" name="surname" id="surname"required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="First Name" name="firstName" id="firstName"required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="course">Select a Course:</label>
+                    <select id="course" name="course">
+                        <option value="1">Course 1</option>
+                        <option value="2">Course 2</option>
+                        <option value="3">Course 3</option>
+                        <option value="4">Course 4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="group">Select a Group:</label>
+                    <select id="group" name="group">
+                    </select>
+                    <input type="text" id="groupInput" placeholder="Search or Enter Group" style="display: none;">
+                </div>
+                <div class="form-group">
+                    <label for="department">Select a Department:</label>
+                    <select id="department" name="department">
+                        <input type="text" placeholder="Enter Department" id="departmentInput" style="display: none;">
+                    <span id="departmentSeats" class="seats">Free Seats: 0</span>
+                    <br>
+                    </select>
+                    <input type="text" id="departmentInput" placeholder="Search or Enter Department" style="display: none;">
+                </div>
+                <div class="form-group">
+                    <label for="teacher">Select a Teacher:</label>
+                    <select id="teacher" name="teacher">
+                        <input type="text" placeholder="Enter Teacher" id="teacherInput" style="display: none;">
+                        <span id="teacherSeats" class="seats">Free Seats: 0</span>
+                        <br>
+                    </select>
+                    <input type="hidden" id="hiddenName" name="hiddenName" value="">
+        <input type="hidden" id="hiddenEmail" name="hiddenEmail" value="">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <div id="registrationMessage" class="registration-message"></div>
+
+    <script src="js/registration.js"></script>
+</body>
+</html>

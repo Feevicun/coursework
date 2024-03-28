@@ -1,0 +1,99 @@
+/* Загальні стилі */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стилі для постерів */
+
+.posters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    filter: blur(0); /* Заборонити початковий блюр */
+}
+
+/* Стилі для фону контейнера постерів */
+
+.posters-container::before {
+    content: "";
+    background-color: #f5f5f5;
+    filter: blur(5px);
+    pointer-events: none;
+    transition: filter 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Помістити під постерами */
+}
+
+.poster {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none; /* Заборонити виділення тексту */
+    position: relative;
+}
+
+/* Стилі для активного постера */
+
+.poster.active {
+    background-color: #f5f5f5;
+}
+
+.poster h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Стилі для інформації про студента (показується при активному постері) */
+
+.poster .details {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Забезпечити, що розгорнутий постер розташований посередині без блюрення */
+.poster.expanded {
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Забезпечення блюру заднього фону при розгортанні постера */
+.posters-container.blurred::before {
+    filter: blur(5px);
+    pointer-events: none;
+}
+/* Стилі для кнопки видалення */
+.delete-button-container {
+    position: relative;
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
